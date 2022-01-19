@@ -9,8 +9,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
-               // sh './mvnw clean package'
+               sh 'chmod +x mvnw && ./mvnw clean package'
             }
         }
     }
